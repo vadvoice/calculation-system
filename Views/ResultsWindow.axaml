@@ -1,0 +1,23 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="c_sharp.Views.ResultsWindow"
+        Title="Calculation Results"
+        Width="600" Height="400">
+    <StackPanel Margin="20">
+        <TextBlock Text="Calculation Results" FontSize="20" Margin="0,0,0,20"/>
+        
+        <TextBlock Text="Sample Results (Fake Data):" Margin="0,0,0,10"/>
+        <ListBox Height="250">
+            <ListBoxItem>Iteration 1: Value = 42.5</ListBoxItem>
+            <ListBoxItem>Iteration 2: Value = 38.7</ListBoxItem>
+            <ListBoxItem>Iteration 3: Value = 45.2</ListBoxItem>
+            <ListBoxItem>Iteration 4: Value = 41.9</ListBoxItem>
+            <ListBoxItem>Iteration 5: Value = 43.1</ListBoxItem>
+        </ListBox>
+
+        <Button Content="Start New Calculation" 
+                Click="OnNewCalculationClick"
+                HorizontalAlignment="Right" 
+                Margin="0,20,0,0"/>
+    </StackPanel>
+</Window> 
