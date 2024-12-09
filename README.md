@@ -1,10 +1,10 @@
 
-# Triangle Area Calculator
+# Calculation System
 
-This is a simple Avalonia UI application that calculates the area of a triangle based on user input for the base and height.
+This is a simple Avalonia UI application that calculates results based on input values
 
 ## Prerequisites
-
+- C#
 - .NET 5.0 or later
 - Avalonia UI
 
@@ -29,8 +29,8 @@ This is a simple Avalonia UI application that calculates the area of a triangle 
    ```bash
    dotnet run
    ```
-2. In the application window, enter the base and height of the triangle.
-3. Click the "Calculate" button to calculate the area of the triangle.
+2. In the application window, enter values
+3. Click the "Start calculatins" button to see the results
 
 ## Contributing
 
