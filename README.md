@@ -39,10 +39,3 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
-
-Replace `https://github.com/vadvoice/triangle-area-calculator.git` with the actual URL of your repository.
-
-Next steps could include:
-- Adding more detailed instructions for using the application
-- Adding screenshots of the application
-- Adding a section for reporting bugs or requesting features
