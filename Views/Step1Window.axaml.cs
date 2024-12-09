@@ -14,8 +14,12 @@ public partial class Step1Window : Window
     private void OnNextClick(object? sender, RoutedEventArgs e)
     {
         var store = CalculationStore.Instance;
-        store.SelectedFormula = (FormulaComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
-        store.SelectedParameters = (ParametersComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
+        var selectedFormula = FormulaComboBox.SelectedItem as ComboBoxItem;
+        store.SelectedFormula = selectedFormula?.Content?.ToString();
+
+        var selectedParameters = ParametersComboBox.SelectedItem as ComboBoxItem;
+        store.SelectedParameters = selectedParameters?.Content?.ToString();
+
         store.ParametersCount = (int)ParametersCount.Value;
         store.IterationsCount = (int)IterationsCount.Value;
 

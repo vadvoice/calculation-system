@@ -17,21 +17,23 @@ public partial class Step3Window : Window
     private void LoadSummary()
     {
         var store = CalculationStore.Instance;
-        SummaryText.Text = "Selected Configuration:\n\n" +
-            $"Formula: {store.SelectedFormula}\n" +
-            $"Parameters Count: {store.ParametersCount}\n" +
-            $"Algorithm: {store.SelectedAlgorithm}\n" +
-            $"Points on Sphere: {store.PointsOnSphere}\n" +
-            $"Points on Cone Base:s {store.PointsOnConeBase}\n" +
-            $"Max Iterations: {store.MaxIterations}";
+        SummaryText.Text = 
+            "Вибрана конфігурація:\n\n" +
+            $"{"Формула:",-25} {store.SelectedFormula}\n" +
+            $"{"Параметри:",-25} {store.SelectedParameters}\n" +
+            $"{"Кількість параметрів:",-25} {store.ParametersCount}\n" +
+            $"{"Алгоритм:",-25} {store.SelectedAlgorithm}\n" +
+            $"{"Точок на сфері:",-25} {store.PointsOnSphere}\n" +
+            $"{"Точок на основі конуса:",-25} {store.PointsOnConeBase}\n" +
+            $"{"Макс. кількість ітерацій:",-25} {store.MaxIterations}";
     }
 
     private async void OnStartClick(object? sender, RoutedEventArgs e)
     {
         var dialog = MessageBoxManager
             .GetMessageBoxStandard(
-                "Confirm Calculation",
-                "Are you sure you want to start the calculation?",
+                "Зміна алгоритму",
+                "Ви впевнені, що хочете розпочати розрахунок?",
                 ButtonEnum.YesNo);
 
         var result = await dialog.ShowAsync();
