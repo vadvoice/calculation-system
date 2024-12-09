@@ -15,7 +15,9 @@ public partial class Step1Window : Window
     {
         var store = CalculationStore.Instance;
         store.SelectedFormula = (FormulaComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
-        store.ParametersCount = (int)ParametersInput.Value;
+        store.SelectedParameters = (ParametersComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
+        store.ParametersCount = (int)ParametersCount.Value;
+        store.IterationsCount = (int)IterationsCount.Value;
 
         var step2 = new Step2Window();
         step2.Show();

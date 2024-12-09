@@ -2,25 +2,41 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         x:Class="c_sharp.Views.Step1Window"
         Title="Step 1 - Formula Configuration"
-        Width="400" Height="300">
+        Width="500" Height="400">
     <StackPanel Margin="20">
-        <TextBlock Text="Step 1: Select Formula and Parameters" FontSize="20" Margin="0,0,0,20"/>
+        <TextBlock Text="Step 1: Formula and Parameters" FontSize="20" Margin="0,0,0,20"/>
         
         <ComboBox Name="FormulaComboBox" 
                   Width="200" 
                   Margin="0,10"
                   PlaceholderText="Select Formula">
-            <ComboBoxItem>Square Function</ComboBoxItem>
-            <ComboBoxItem>Cubic Function</ComboBoxItem>
-            <ComboBoxItem>Exponential Function</ComboBoxItem>
+            <ComboBoxItem>f(x,y)= ∑ i = 1 N (ai − x)2 + (bi − y)2</ComboBoxItem>
+            <ComboBoxItem>f(x,y)=(a−x)2+b(y−x2)2</ComboBoxItem>
+            <ComboBoxItem>f(x)=a⋅N+∑i=1N​[xi2​+a⋅cos(2πxi​)]</ComboBoxItem>
         </ComboBox>
 
-        <NumericUpDown Name="ParametersInput"
+        <ComboBox Name="ParametersComboBox"
+                Width="200"
+                Margin="0,10"
+                PlaceholderText="Select Parameter">
+                <ComboBoxItem>/inputs/dataset1.csv</ComboBoxItem>
+                <ComboBoxItem>/inputs/dataset2.csv</ComboBoxItem>
+                <ComboBoxItem>/inputs/dataset3.csv</ComboBoxItem>
+        </ComboBox>
+
+        <NumericUpDown Name="ParametersCount"
                       Minimum="1"
                       Maximum="10"
                       Value="1"
                       Margin="0,10"
                       Watermark="Number of Parameters"/>
+
+        <NumericUpDown Name="IterationsCount"
+                      Minimum="1"
+                      Maximum="1000"
+                      Value="100"
+                      Margin="0,10"
+                      Watermark="Number of Iterations"/>
 
         <Button Content="Next" 
                 Click="OnNextClick"

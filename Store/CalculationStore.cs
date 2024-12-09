@@ -14,8 +14,16 @@ public class CalculationStore
     }
 
     public string? SelectedFormula { get; set; }
+    public string? SelectedParameters { get; set; }
     public int ParametersCount { get; set; }
+    public int IterationsCount { get; set; }
+  
+    // step 2
     public string? SelectedAlgorithm { get; set; }
-    public int PointsCount { get; set; }
-    public int MinNumber { get; set; }
+    public int InitialStepSize { get; set; }
+    public int MinStepSize { get; set; }
+    public int InitialAngle { get; set; }
+    public int PointsOnSphere { get; set; }
+    public int PointsOnConeBase { get; set; }
+    public int MaxIterations { get; set; }
 } 

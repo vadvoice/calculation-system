@@ -15,8 +15,12 @@ public partial class Step2Window : Window
     {
         var store = CalculationStore.Instance;
         store.SelectedAlgorithm = (AlgorithmComboBox.SelectedItem as ComboBoxItem)?.Content?.ToString();
-        store.PointsCount = (int)PointsInput.Value;
-        store.MinNumber = (int)MinNumberInput.Value;
+        store.InitialStepSize = (int)InitialStepSize.Value;
+        store.MinStepSize = (int)MinStepSize.Value;
+        store.InitialAngle = (int)InitialAngle.Value;
+        store.PointsOnSphere = (int)PointsOnSphere.Value;
+        store.PointsOnConeBase = (int)PointsOnConeBase.Value;
+        store.MaxIterations = (int)MaxIterations.Value;
 
         var step3 = new Step3Window();
         step3.Show();

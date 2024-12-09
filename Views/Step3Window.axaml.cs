@@ -19,8 +19,9 @@ public partial class Step3Window : Window
             $"Formula: {store.SelectedFormula}\n" +
             $"Parameters Count: {store.ParametersCount}\n" +
             $"Algorithm: {store.SelectedAlgorithm}\n" +
-            $"Points Count: {store.PointsCount}\n" +
-            $"Minimum Number: {store.MinNumber}";
+            $"Points on Sphere: {store.PointsOnSphere}\n" +
+            $"Points on Cone Base: {store.PointsOnConeBase}\n" +
+            $"Max Iterations: {store.MaxIterations}";
     }
 
     private void OnStartClick(object? sender, RoutedEventArgs e)
