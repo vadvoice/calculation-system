@@ -12,11 +12,11 @@ This is a simple Avalonia UI application that calculates results based on input 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/triangle-area-calculator.git
+   git clone {REPO}
    ```
 2. Navigate to the project directory:
    ```bash
-   cd triangle-area-calculator
+   cd calculation-system
    ```
 3. Restore the packages:
    ```bash
